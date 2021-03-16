@@ -2,14 +2,14 @@
  "builders": [{
    "ami_name": "jenkins-node",
    "type": "amazon-ebs",
-   "region": "eu-west-1",
+   "region": "us-east-1",
    "source_ami_filter": {
-     "owners": ["099720109477"],
      "filters": {
        "virtualization-type": "hvm",
-       "Name": "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*",
+       "name": "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*",
        "root-device-type": "ebs"
      },
+   "owners": ["099720109477"],
    "most_recent": true
    },
    "instance_type": "t3.small",
